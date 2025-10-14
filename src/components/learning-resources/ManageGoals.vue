@@ -1,0 +1,12 @@
+<script setup lang="ts"></script>
+
+<template>
+  <h2>Manage Goals</h2>
+  <input
+    type="text"
+    name=""
+    id=""
+  />
+</template>
+
+<style scoped></style>
