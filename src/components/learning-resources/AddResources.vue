@@ -1,12 +1,6 @@
 <script setup lang="ts"></script>
 
 <template>
-  <h2>Manage Goals</h2>
-  <input
-    type="text"
-    name=""
-    id=""
-  />
+  <div>Adding new file</div>
 </template>
-
 <style scoped></style>

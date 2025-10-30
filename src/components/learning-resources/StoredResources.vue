@@ -1,6 +1,10 @@
 <script lang="ts" setup>
+  import { inject } from "vue";
   import LearningResources from "./LearningResources.vue";
-  const { storedResources } = defineProps(["storedResources"]);
+
+  const defaultResource = [{ id: "" }];
+
+  const storedResources = inject("storedResources", defaultResource);
 </script>
 
 <template>
