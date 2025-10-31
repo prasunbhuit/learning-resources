@@ -28,7 +28,24 @@
   });
 
   const storedResources = ref(resource);
+
+  const addNewResources = (title: string, desc: string, link: string) => {
+    const newResource = {
+      id: new Date().toISOString(),
+      title: title,
+      description: desc,
+      links: link,
+    };
+
+    storedResources.value.unshift(newResource);
+    console.log(storedResources.value);
+
+    activeButton.value = StoredResources;
+    setActiveButton.value = "stored-resources";
+  };
+
   provide("storedResources", storedResources);
+  provide("addNewResources", addNewResources);
 </script>
 
 <template>
@@ -44,7 +61,9 @@
       >Add New Resource</BaseButton
     >
   </BaseCard>
-  <component :is="activeButton"></component>
+  <KeepAlive>
+    <component :is="activeButton"></component>
+  </KeepAlive>
 </template>
 
 <style scoped></style>
